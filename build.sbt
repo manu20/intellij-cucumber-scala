@@ -6,16 +6,6 @@ version := "0.3.0"
 
 scalaVersion :=  "2.11.2"
 
-//libraryDependencies +=  "org.scala-lang" % "scala-reflect" % scalaVersion.value
-
-//libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
-
-//unmanagedSourceDirectories in Compile += baseDirectory.value /  "src"
-
-//unmanagedSourceDirectories in Test += baseDirectory.value /  "test"
-
-//unmanagedResourceDirectories in Compile += baseDirectory.value /  "resources"
-
 javacOptions in Global ++= Seq("-source", "1.6", "-target", "1.6")
 
 scalacOptions in Global += "-target:jvm-1.6"
@@ -31,6 +21,8 @@ pluginDependencies := Seq()
 pluginDependencies +=  "com.jetbrains.plugins" % "org.intellij.scala" % "current"
 
 pluginDependencies +=  "com.jetbrains.plugins" % "cucumber" % "current"
+
+pluginDependencies +=  "com.jetbrains.plugins" % "cucumber-java" % "current"
 
 ideaBasePath in Global := baseDirectory.value / "SDK" / "ideaSDK" / s"idea-${ideaVersion.value}"
 

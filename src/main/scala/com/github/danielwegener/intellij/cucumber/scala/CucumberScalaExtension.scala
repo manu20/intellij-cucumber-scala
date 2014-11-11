@@ -1,6 +1,6 @@
 package com.github.danielwegener.intellij.cucumber.scala
 
-import java.util.{ Collections, Collection => JavaCollection, Set => JavaSet }
+import java.util.{ Collection => JavaCollection, Set => JavaSet }
 
 import com.github.danielwegener.intellij.cucumber.scala.steps.ScalaStepDefinition
 import com.intellij.openapi.diagnostic.Logger
@@ -75,7 +75,7 @@ class CucumberScalaExtension extends AbstractCucumberExtension {
 
   }
 
-  def classAndItsInheritors(parentOfHirarchy: ScClass, scope: GlobalSearchScope): Iterable[ScClass] = {
+  private def classAndItsInheritors(parentOfHirarchy: ScClass, scope: GlobalSearchScope): Iterable[ScClass] = {
 
     @tailrec
     def helper(queue: List[ScClass], akku: Set[ScClass]): Set[ScClass] = {
