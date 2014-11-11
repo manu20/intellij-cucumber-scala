@@ -2,6 +2,8 @@ import Keys.{`package` => pack}
 
 name :=  "Cucumber for Scala"
 
+normalizedName := "intellij-cucumber-scala"
+
 version := "0.3.0"
 
 scalaVersion :=  "2.11.2"
